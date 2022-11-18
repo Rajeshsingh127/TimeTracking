@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  font-size: 300;
+  background-color: hsl(226deg, 43%, 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  width: min(100%, 21rem);
+  padding: 3rem 0;
+}
+@media screen and (min-width: 768px) {
+  main {
+    width: min(90%, 50rem);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: min(90%, 65rem);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+}
+
+.user {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .user {
+    grid-row: 1/-1;
+  }
+}
+.user-info {
+  border-radius: 0 0 1rem 1rem;
+  background-color: hsl(246deg, 80%, 60%);
+  display: flex;
+  align-items: center;
+  padding: 2rem 1.5rem 2rem 1.5rem;
+  gap: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    align-items: baseline;
+    gap: 2rem;
+    padding-bottom: 3rem;
+  }
+}
+.user-info .avatar {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border: 3px solid hsl(0deg, 100%, 100%);
+  border-radius: 100rem;
+}
+.user-info .title {
+  color: hsl(236deg, 100%, 87%);
+  font-weight: 400;
+  font-size: 1rem;
+}
+.user-info .title .name {
+  font-size: 2rem;
+  display: block;
+  color: hsl(0deg, 100%, 100%);
+}
+.user-duration {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (min-width: 768px) {
+  .user-duration {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .user-duration {
+    gap: 1rem;
+  }
+}
+.user-duration input[type=radio] {
+  display: none;
+}
+.user-duration input[type=radio] + label {
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: hsl(235deg, 45%, 61%);
+}
+.user-duration input[type=radio] + label:hover {
+  color: hsl(0deg, 100%, 100%);
+}
+.user-duration input[type=radio]:checked + label {
+  color: hsl(0deg, 100%, 100%);
+}
+
+.card {
+  background-repeat: no-repeat;
+  background-position: top -13px right 15px;
+  padding-top: 2.5rem;
+  border-radius: 1rem 1rem 1.2rem 1.2rem;
+}
+.card.work-detail {
+  background-color: hsl(15deg, 100%, 70%);
+  background-image: url("./images/icon-work.svg");
+}
+.card.play-detail {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url("./images/icon-play.svg");
+}
+.card.play-detail {
+  background-color: hsl(195deg, 74%, 62%);
+  background-image: url("./images/icon-play.svg");
+}
+.card.study-detail {
+  background-color: hsl(348deg, 100%, 68%);
+  background-image: url("./images/icon-study.svg");
+}
+.card.exercise-detail {
+  background-color: hsl(145deg, 58%, 55%);
+  background-image: url("./images/icon-exercise.svg");
+}
+.card.social-detail {
+  background-color: hsl(264deg, 64%, 52%);
+  background-image: url("./images/icon-social.svg");
+}
+.card.selfcare-detail {
+  background-color: hsl(43deg, 84%, 65%);
+  background-image: url("./images/icon-self-care.svg");
+}
+.card-container {
+  border-radius: 1rem;
+  padding: 1.5rem 1.3rem 2rem 1.3rem;
+  background-color: hsl(235deg, 46%, 20%);
+}
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card-header .title {
+  color: hsl(0deg, 100%, 100%);
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.card-header button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.card-body {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .card-body {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+.card-body .stats {
+  color: hsl(0deg, 100%, 100%);
+  font-weight: 300;
+  font-size: 2.5rem;
+}
+.card-body .stats-prev {
+  color: hsl(236deg, 100%, 87%);
+}
+
+/*# sourceMappingURL=style.css.map */

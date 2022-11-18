@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <main class="content-wrapper">
+      <section class="user">
+        <div class="user-info">
+          <div class="avatar">
+            <img src="/images/image-jeremy.png" />
+          </div>
+          <h1 class="title">
+            Report for <span class="name"> Rajesh Singh</span>
+          </h1>
+        </div>
+        <div class="user-duration" role="radiogroup">
+          <input
+            type="radio"
+            class="duration-time"
+            id="daily"
+            name="durationframe"
+            value="daily"
+          />
+          <label for="daily">Daily</label>
+
+          <input
+            type="radio"
+            class="duration-time"
+            id="weekly"
+            name="durationframe"
+            value="weekly"
+          />
+          <label for="weekly">Weekly</label>
+
+          <input
+            type="radio"
+            class="duration-time"
+            id="monthly"
+            name="durationframe"
+            value="monthly"
+          />
+          <label for="monthly">Monthly</label>
+        </div>
+      </section>
+      <section class="work-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Work</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+      <section class="play-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Play</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+      <section class="study-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Study</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+      <section class="exercise-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Exercise</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+      <section class="social-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Social</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+      <section class="selfcare-detail card">
+        <div class="card-container">
+          <div class="card-header">
+            <h2 class="title">Self Care</h2>
+            <button>
+              <svg width="21" height="5" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z"
+                  fill="#BBC0FF"
+                  fill-rule="evenodd"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="card-body">
+            <h2 class="stats">32hrs</h2>
+            <p class="stats-prev">Last Week-36hrs</p>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

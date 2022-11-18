@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+$white: hsl(0, 100%, 100%);
+$Blue: hsl(246, 80%, 60%);
+$work: hsl(15, 100%, 70%);
+$play: hsl(195, 74%, 62%);
+$study: hsl(348, 100%, 68%);
+$exercise: hsl(145, 58%, 55%);
+$social: hsl(264, 64%, 52%);
+$selfcare: hsl(43, 84%, 65%);
+$Verydarkblue: hsl(226, 43%, 10%);
+$Darkblue: hsl(235, 46%, 20%);
+$Desaturatedblue: hsl(235, 45%, 61%);
+$PaleBlue: hsl(236, 100%, 87%);
+$fontFamily: 'Rubik', sans-serif;
+$fontRegular: 300;
+$fontMedium: 400;
+$fontBold: 500;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+}
+
+body {
+  font-family: $fontFamily;
+  font-size: $fontRegular;
+  background-color: $Verydarkblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  // margin: 4rem 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 2rem;
+  width: min(100%, 21rem);
+  padding: 3rem 0;
+  @media screen and (min-width: 768px) {
+    width: min(90%, 50rem);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  @media screen and (min-width: 1024px) {
+    width: min(90%, 65rem);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: flex-start;
+  }
+}
+
+.user {
+  background-color: $Darkblue;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    grid-row: 1 / -1;
+  }
+
+  &-info {
+    border-radius: 0 0 1rem 1rem;
+    background-color: $Blue;
+    display: flex;
+    align-items: center;
+    padding: 2rem 1.5rem 2rem 1.5rem;
+    gap: 1rem;
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      align-items: baseline;
+      gap: 2rem;
+      padding-bottom: 3rem;
+    }
+    .avatar {
+      width: 4rem;
+      height: 4rem;
+      object-fit: cover;
+      border: 3px solid $white;
+      border-radius: 100rem;
+    }
+    .title {
+      color: $PaleBlue;
+      font-weight: $fontMedium;
+      font-size: 1rem;
+
+      .name {
+        font-size: 2rem;
+        display: block;
+        color: $white;
+      }
+    }
+  }
+
+  &-duration {
+    padding: 2rem;
+    display: flex;
+    justify-content: space-around;
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    @media screen and (min-width: 1024px) {
+      gap: 1rem;
+    }
+
+    input[type='radio'] {
+      display: none;
+
+      + label {
+        cursor: pointer;
+        font-weight: $fontMedium;
+        font-size: 1.2rem;
+        color: $Desaturatedblue;
+
+        &:hover {
+          color: $white;
+        }
+      }
+
+      &:checked + label {
+        color: $white;
+      }
+    }
+  }
+}
+
+.card {
+  background-repeat: no-repeat;
+  background-position: top -13px right 15px;
+  padding-top: 2.5rem;
+
+  border-radius: 1rem 1rem 1.2rem 1.2rem;
+  &.work-detail {
+    background-color: $work;
+    background-image: url('./images/icon-work.svg');
+  }
+
+  &.play-detail {
+    background-color: $play;
+    background-image: url('./images/icon-play.svg');
+  }
+
+  &.play-detail {
+    background-color: $play;
+    background-image: url('./images/icon-play.svg');
+  }
+
+  &.study-detail {
+    background-color: $study;
+    background-image: url('./images/icon-study.svg');
+  }
+
+  &.exercise-detail {
+    background-color: $exercise;
+    background-image: url('./images/icon-exercise.svg');
+  }
+
+  &.social-detail {
+    background-color: $social;
+    background-image: url('./images/icon-social.svg');
+  }
+  &.selfcare-detail {
+    background-color: $selfcare;
+    background-image: url('./images/icon-self-care.svg');
+  }
+
+  &-container {
+    border-radius: 1rem;
+    padding: 1.5rem 1.3rem 2rem 1.3rem;
+    background-color: $Darkblue;
+  }
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .title {
+      color: $white;
+      font-weight: $fontMedium;
+      font-size: 1.2rem;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &-body {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      align-items: baseline;
+    }
+    .stats {
+      color: $white;
+      font-weight: $fontRegular;
+      font-size: 2.5rem;
+    }
+    .stats-prev {
+      color: $PaleBlue;
+    }
+  }
+}
